@@ -29,7 +29,7 @@ export const handleCreateUser = async (req: http.IncomingMessage, res: http.Serv
     res.writeHead(StatusCode.Created, headerTypeJson);
 
     res.end(JSON.stringify(addedUser));
-  } catch (error) {
+  } catch {
     res.writeHead(StatusCode.InternalServerError, headerTypeJson);
     res.end(JSON.stringify(errObj.internalServerError));
   }

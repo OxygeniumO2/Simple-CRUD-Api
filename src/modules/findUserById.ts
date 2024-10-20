@@ -1,5 +1,3 @@
-import http from 'node:http';
-import { headerTypeJson, StatusCode } from '../utils/responseHelpers';
 import db from './db';
 import { User } from '../utils/interfaces';
 

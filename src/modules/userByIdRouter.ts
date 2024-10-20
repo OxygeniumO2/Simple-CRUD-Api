@@ -1,10 +1,11 @@
 import http from 'node:http';
-import { handleCreateUser } from './createUser';
 import { errObj, headerTypeJson, StatusCode } from '../utils/responseHelpers';
 import getUser from './getUser';
 import { validate as uuidValidate } from 'uuid';
 import findUserById from './findUserById';
 import { Method } from '../utils/requestHelpers';
+import deleteUserByIndex from './deleteUserByIndex';
+import updateUserByIndex from './updateUserByIndex';
 
 const usersByIdRouter = async (req: http.IncomingMessage, res: http.ServerResponse) => {
   const { method, url } = req;
@@ -32,12 +33,18 @@ const usersByIdRouter = async (req: http.IncomingMessage, res: http.ServerRespon
       case Method.GET:
         getUser(res, user);
         break;
+      case Method.PUT:
+        updateUserByIndex(req, res, index);
+        break;
+      case Method.DELETE:
+        deleteUserByIndex(res, index);
+        break;
       default:
         res.writeHead(StatusCode.NotFound, headerTypeJson);
         res.end(JSON.stringify(errObj.invalidMethod));
         return;
     }
-  } catch (error) {
+  } catch {
     res.writeHead(StatusCode.InternalServerError, headerTypeJson);
     res.end(JSON.stringify(errObj.internalServerError));
   }

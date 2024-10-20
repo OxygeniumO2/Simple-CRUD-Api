@@ -20,7 +20,7 @@ const usersRouter = async (req: http.IncomingMessage, res: http.ServerResponse) 
         res.end(JSON.stringify(errObj.invalidMethod));
         return;
     }
-  } catch (error) {
+  } catch {
     res.writeHead(StatusCode.InternalServerError, headerTypeJson);
     res.end(JSON.stringify(errObj.internalServerError));
   }

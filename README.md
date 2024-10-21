@@ -24,6 +24,8 @@ This API allows managing users with basic CRUD operations.
 
 ## Endpoints
 
+---
+
 ### GET /api/users
 
 **Description**: Fetch a user by ID.
@@ -37,6 +39,8 @@ This API allows managing users with basic CRUD operations.
 ```
 curl -X GET http://localhost:3000/api/users
 ```
+
+---
 
 ### GET /api/users/{userId}
 
@@ -55,6 +59,8 @@ where `{userId}` is uuidv4
 ```
 curl -X GET http://localhost:3000/api/users/{userId}
 ```
+
+---
 
 ### POST /api/users
 
@@ -78,6 +84,8 @@ curl -X POST http://localhost:3000/api/users \
   -H "Content-Type: application/json" \
   -d '{"username": "John", "age": 30, "hobbies": ["reading"]}'
 ```
+
+---
 
 ### PUT /api/users/{userId}
 
@@ -103,6 +111,8 @@ curl -X PUT http://localhost:3000/api/users/{userId} \
   -d '{"username": "JohnUpdated", "age": 31, "hobbies": ["gaming"]}'
 ```
 
+---
+
 ### DELETE /api/users/{userId}
 
 **Description**: Delete a user by ID.
@@ -118,6 +128,8 @@ curl -X PUT http://localhost:3000/api/users/{userId} \
 ```
 curl -X DELETE http://localhost:3000/api/users/{userId}
 ```
+
+---
 
 ## User Object Structure in DB
 

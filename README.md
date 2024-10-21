@@ -20,7 +20,7 @@ This API allows managing users with basic CRUD operations.
 
 ### Base URL
 
-`http://localhost:3000`
+`http://localhost:4000`
 
 ## Endpoints
 

@@ -42,6 +42,7 @@ curl -X GET http://localhost:3000/api/users
 where `{userId}` is uuidv4
 
 **Description**: Fetch a user by ID.
+
 **Response**:
 
 - `200 OK`: Returns the user.
@@ -57,6 +58,7 @@ curl -X GET http://localhost:3000/api/users/{userId}
 ### POST /api/users
 
 **Description**: Create a new user.
+
 **Body**:
 
 - `username` (string, required)

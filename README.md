@@ -9,7 +9,7 @@
 3. Go to folder `cd Simple-CRUD-Api`
 4. Change current branch to develop `git checkout develop`
 5. Install all dependencies `npm install`
-6. Create file in the root of the project with name `.env` and paste `PORT=4000` into it, or copy from file `.env.example`
+6. Create file in the root of the project with name `.env` and paste `PORT=4000` into it, or just rename file `.env.example` to `.env`
 7. Print into console to run development mode: `npm run start:dev` or production mode: `npm run start:prod`
 
 ---

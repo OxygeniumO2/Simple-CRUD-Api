@@ -37,7 +37,7 @@ This API allows managing users with basic CRUD operations.
 ### Example:
 
 ```
-curl -X GET http://localhost:3000/api/users
+curl -X GET http://localhost:4000/api/users
 ```
 
 ---
@@ -57,7 +57,7 @@ where `{userId}` is uuidv4
 ### Example:
 
 ```
-curl -X GET http://localhost:3000/api/users/{userId}
+curl -X GET http://localhost:4000/api/users/{userId}
 ```
 
 ---
@@ -80,7 +80,7 @@ curl -X GET http://localhost:3000/api/users/{userId}
 ### Example:
 
 ```
-curl -X POST http://localhost:3000/api/users \
+curl -X POST http://localhost:4000/api/users \
   -H "Content-Type: application/json" \
   -d '{"username": "John", "age": 30, "hobbies": ["reading"]}'
 ```
@@ -106,7 +106,7 @@ curl -X POST http://localhost:3000/api/users \
 ### Example:
 
 ```
-curl -X PUT http://localhost:3000/api/users/{userId} \
+curl -X PUT http://localhost:4000/api/users/{userId} \
   -H "Content-Type: application/json" \
   -d '{"username": "JohnUpdated", "age": 31, "hobbies": ["gaming"]}'
 ```
@@ -126,7 +126,7 @@ curl -X PUT http://localhost:3000/api/users/{userId} \
 ### Example:
 
 ```
-curl -X DELETE http://localhost:3000/api/users/{userId}
+curl -X DELETE http://localhost:4000/api/users/{userId}
 ```
 
 ---
